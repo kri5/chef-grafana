@@ -23,6 +23,8 @@ module GrafanaCookbook
         http.request(request)
       end
 
+      Chef::Log.warn("Adding data source response : #{response}")
+
       handle_response(
         response,
         success: 'Datasource addition was successful.',
