@@ -16,6 +16,8 @@ module GrafanaCookbook
       request.add_field('Content-Type', 'application/json;charset=utf-8')
       request.body = db_options.to_json
 
+      Chef::Log.warn("Adds data source request body : #{request.body}")
+
       # When you want to debug the http request
       # http.set_debug_output $stdout
 
