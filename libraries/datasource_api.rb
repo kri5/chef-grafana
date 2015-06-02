@@ -95,6 +95,8 @@ module GrafanaCookbook
         http.request(request)
       end
 
+      Chef::Log.warn(response)
+
       handle_response(
         response,
         success: 'List of datasources have been successfully retrieved.',
