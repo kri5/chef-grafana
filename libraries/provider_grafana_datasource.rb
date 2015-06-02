@@ -50,6 +50,7 @@ class Chef
           password: new_resource.password
         }
         datasources = get_data_source_list(grafana_options)
+        Chef::Log.warn(datasources)
 
         exists = false
         datasources.each do |src|
