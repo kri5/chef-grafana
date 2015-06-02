@@ -20,6 +20,8 @@ module GrafanaCookbook
         http.request(request)
       end
 
+      Chef::Log.warn(response)
+
       handle_response(
         response,
         success: 'Login was successful.',
