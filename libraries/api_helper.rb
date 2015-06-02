@@ -20,7 +20,7 @@ module GrafanaCookbook
         http.request(request)
       end
 
-      Chef::Log.warn(response)
+      Chef::Log.warn("login response : #{response}")
 
       handle_response(
         response,
